@@ -3,6 +3,11 @@ class SmoothiesController < ApplicationController
 
   def index
     @smoothies = Smoothie.all
+    @search = params["search"]
+    if @search.present?
+      @name = @search["query"]
+      @smoothies = Smoothie.where("name ILIKE ?", "%#{@name}%")
+    end
   end
 
   def show; end
