@@ -1,0 +1,7 @@
+<div class='container mt-5'>
+  <%= simple_form_for @smoothie do |f| %>
+    <%= f.input :name %>
+    <%= f.input :img_url, label: "Image URL" %>
+    <%= f.submit "Add My Smoothie!", class: "btn btn-rounded btn-info" %>
+  <% end %>
+</div>

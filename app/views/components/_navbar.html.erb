@@ -1,0 +1,21 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to smoothies_path, class: "navbar-brand" do %>
+    <i class="far fa-lemon"></i>
+    Just Add Lemon!
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Add New Smoothie", new_smoothie_path , class: "btn btn-info btn-rounded" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Manage Ingredients", ingredients_path , class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>

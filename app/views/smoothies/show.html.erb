@@ -1,0 +1,28 @@
+<div class='container recipe-card mt-5'>
+  <div class='row justify-content-end'>
+      <%= link_to 'Add ingredient', new_smoothie_dose_path(@smoothie), class: "btn btn-info btn-rounded" %>
+  </div>
+  <div class='row justify-content-center mt-3'>
+    <div class='col-6'>
+      <% if @smoothie.img_url.nil? %>
+        <%= image_tag 'smoothie_default_img.svg', class: "avatar-extra-large" %>
+      <% else %>
+        <img scr="<%= @smoothie.img_url %>">
+      <% end %>
+    </div>
+    <div class='col-6'>
+      <% if @smoothie.doses %>
+        <ul>
+          <% @smoothie.doses.each do |dose| %>
+            <li>
+            <%= dose.ingredient.name %> - <%= dose.description %>
+            <span><%= link_to '🗑', dose_path(dose), method: :delete %></span>
+            </li>
+          <% end %>
+        </ul>
+      <% else %>
+        <p>Just water? 😁</p>
+      <% end %>
+    </div>
+  </div>
+</div>

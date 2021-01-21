@@ -1,0 +1,7 @@
+<div class='container mt-5'>
+  <%= simple_form_for [@smoothie, @dose] do |f| %>
+    <%= f.association :ingredient, as: :select %>
+    <%= f.input :description, placeholder: '1/2 cup' %>
+    <%= f.submit "Add ingredient", class: "btn btn-rounded btn-info" %>
+  <% end %>
+</div>
