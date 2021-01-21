@@ -7,7 +7,7 @@
       <% if @smoothie.img_url.nil? %>
         <%= image_tag 'smoothie_default_img.svg', class: "avatar-extra-large" %>
       <% else %>
-        <img scr="<%= @smoothie.img_url %>">
+        <img src="<%= @smoothie.img_url %>">
       <% end %>
     </div>
     <div class='col-6'>
